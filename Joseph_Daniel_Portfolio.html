@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Blossom Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5f8;
+      overflow-x: hidden;
+      color: #333;
+      cursor: none;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(255,245,248,0.6), rgba(255,238,243,0.9)),
+        url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      animation: slowZoom 35s ease-in-out infinite alternate;
+    }
+    header h1 {
+      font-family: 'Sawarabi Mincho', serif;
+      font-size: 5.5rem;
+      color: #c2185b;
+      text-shadow: 0 6px 30px rgba(0,0,0,0.4);
+    }
+    header p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      color: #4a2c35;
+      letter-spacing: 1px;
+    }
+    section { padding: 80px 10%; }
+    h2 { font-size: 2.5rem; margin-bottom: 30px; color: #ad1457; }
+    .card {
+      background: rgba(255,255,255,0.88);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 0 40px rgba(216,27,96,0.35); }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .project-card { text-decoration: none; color: #4a2c35; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #d81b60;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+    footer { background: #f8bbd0; padding: 40px; text-align: center; }
+    @keyframes slowZoom {
+      from { background-size: 100%; }
+      to { background-size: 110%; }
+    }
+    .cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor"></div>
+
+<header>
+  <div>
+    <h1>Hello, I’m Joseph Daniel</h1>
+    <p>Data Analyst • Python Developer</p>
+    <a href="#contact" class="btn" style="margin-top:20px; display:inline-block">Hire Me</a>
+    <a href="resume.pdf" class="btn" download style="margin-top:20px; margin-left:15px; display:inline-block; background:#6a1b3d;">Download Resume</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I’m Joseph Daniel, a Data Analyst and Python Developer with a background in civil engineering, bringing strong analytical thinking and problem-solving skills into data-driven work. I specialize in Python, SQL, Excel, and Power BI to clean, analyze, and visualize data.
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <a class="card project-card" href="https://github.com/joseph-dany/businfoo.py" target="_blank">Buss Info</a>
+    <a class="card project-card" href="https://github.com/joseph-dany/blood-donation" target="_blank">Blood Donation</a>
+    <a class="card project-card" href="https://github.com/rakeshreddy03/UID" target="_blank">Online Game Store</a>
+    <div class="card project-card">Data Analytic Dashboards</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Data Analyst – Coding Ninjas</h3>
+    <p><strong>01/2025 – 03/2025</strong> | Hyderabad, India</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <form>
+      <input type="text" placeholder="Your Name" style="width:100%;padding:10px;margin-bottom:10px;">
+      <input type="email" placeholder="Your Email" style="width:100%;padding:10px;margin-bottom:10px;">
+      <textarea placeholder="Your Message" style="width:100%;padding:10px;height:120px;"></textarea>
+      <button class="btn" type="submit" style="margin-top:15px;">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Joseph Daniel • Spring Blossom Theme</p>
+</footer>
+
+<script>
+  const cursor = document.querySelector('.cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+</body>
+</html>
